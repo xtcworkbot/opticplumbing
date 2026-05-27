@@ -767,21 +767,14 @@
               </select>
             </div>
             <div class="col-span-12">
-              <label class="form-label">How urgent?</label>
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <label class="flex items-center gap-3 cursor-pointer panel-tight px-4 py-4 hover:border-[color:var(--signal)] transition-colors">
-                  <input type="radio" name="urgency" value="emergency" class="accent-[color:var(--signal)] w-4 h-4" required />
-                  <span class="text-white font-semibold text-[15px]">Right now — emergency</span>
-                </label>
-                <label class="flex items-center gap-3 cursor-pointer panel-tight px-4 py-4 hover:border-[color:var(--sky)] transition-colors">
-                  <input type="radio" name="urgency" value="today" class="accent-[color:var(--sky)] w-4 h-4" />
-                  <span class="text-white font-semibold text-[15px]">Today if possible</span>
-                </label>
-                <label class="flex items-center gap-3 cursor-pointer panel-tight px-4 py-4 hover:border-white/30 transition-colors">
-                  <input type="radio" name="urgency" value="week" class="accent-white w-4 h-4" />
-                  <span class="text-white font-semibold text-[15px]">This week</span>
-                </label>
-              </div>
+              <label class="form-label" for="urgency">How urgent?</label>
+              <select class="form-field" id="urgency" name="urgency" required style="font-size:16px; padding:16px 18px;">
+                <option value="">Select urgency…</option>
+                <option value="emergency">Right now — emergency</option>
+                <option value="today">Today if possible</option>
+                <option value="week">This week</option>
+                <option value="flexible">No rush — whenever suits</option>
+              </select>
             </div>
             <div class="col-span-12">
               <label class="form-label" for="message">Brief description <span style="text-transform:none; color:var(--txt-dim);">(optional)</span></label>
