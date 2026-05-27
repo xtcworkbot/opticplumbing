@@ -16,7 +16,7 @@ Single source of truth for project context. Skills that say "load per-project co
 | Primary suburbs | Concord, Concord West, Cabarita, Mortlake, Rhodes, North Strathfield, Strathfield, Five Dock, Drummoyne, Russell Lea, Wareemba, Abbotsford, Chiswick, Burwood, Homebush, Liberty Grove |
 | LGA | City of Canada Bay (plus parts of Strathfield, Burwood, Inner West LGAs) |
 | ABN | 28 654 678 449 |
-| NSW plumber licence | ⚠️ Pending issuance — do NOT publish a licence number until issued |
+| NSW plumber licence | **368355C** (issued; verifiable via NSW Fair Trading register) |
 | Owner / operator name | Jere Skorin |
 | Email | opticplumbingsolutions@gmail.com |
 | Address | Clermont Avenue, Concord NSW 2137 |
