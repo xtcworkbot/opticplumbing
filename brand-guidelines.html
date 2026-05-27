@@ -1,0 +1,819 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Optic Plumbing Solutions — Brand Guidelines</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,400;0,600;0,700;0,800;1,700;1,800&family=Saira+Condensed:wght@500;700;800&family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root{
+    --bg-0:#04080F;          /* deepest */
+    --bg-1:#070D18;          /* page */
+    --bg-2:#0B1422;          /* panel */
+    --bg-3:#0F1B2D;          /* elevated panel */
+    --line:rgba(120,160,210,.10);
+    --line-strong:rgba(120,160,210,.22);
+
+    --navy:#0A1B33;
+    --optic:#143C72;
+    --hydro:#2E78C8;
+    --sky:#5BA8E8;
+    --ice:#C9E1F5;
+    --chrome:#B6BEC8;
+    --steel:#5B6573;
+    --white:#FFFFFF;
+    --jet:#050505;
+    --signal:#E83A3A;        /* red accent */
+    --signal-deep:#9A1C1C;
+
+    --txt:#D7E2EE;
+    --txt-mut:#7C8A9E;
+    --txt-dim:#4A586B;
+  }
+  html,body{background:var(--bg-1); color:var(--txt); font-family:'Manrope', system-ui, sans-serif;}
+  body{
+    background:
+      radial-gradient(1200px 600px at 110% -10%, rgba(46,120,200,.12), transparent 60%),
+      radial-gradient(900px 500px at -10% 90%, rgba(232,58,58,.05), transparent 60%),
+      linear-gradient(180deg, #050A14 0%, #070D18 40%, #050912 100%);
+    background-attachment: fixed;
+  }
+  .display{font-family:'Saira', sans-serif; font-stretch: condensed; letter-spacing:-0.01em;}
+  .display-italic{font-family:'Saira', sans-serif; font-style:italic; font-weight:800; letter-spacing:-0.02em;}
+  .cond{font-family:'Saira Condensed', sans-serif;}
+  .mono{font-family:'JetBrains Mono', ui-monospace, monospace;}
+
+  .grid-bg{
+    background-image:
+      linear-gradient(rgba(120,160,210,.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(120,160,210,.06) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  .grid-bg-fine{
+    background-image:
+      linear-gradient(rgba(120,160,210,.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(120,160,210,.05) 1px, transparent 1px);
+    background-size: 16px 16px;
+  }
+
+  .panel{
+    background: linear-gradient(180deg, rgba(20,40,70,.35), rgba(8,16,30,.55));
+    border: 1px solid var(--line);
+    box-shadow:
+      inset 0 1px 0 rgba(180,210,240,.04),
+      0 30px 60px -30px rgba(0,0,0,.6),
+      0 0 0 1px rgba(0,0,0,.4);
+    border-radius: 14px;
+  }
+  .panel-tight{
+    background: rgba(10,18,30,.55);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+  }
+
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size:10px; letter-spacing:.28em; text-transform:uppercase;
+    color: var(--sky); opacity:.95;
+  }
+  .eyebrow-num{ color: var(--signal); margin-right:.6rem; }
+  .section-title{
+    font-family:'Saira', sans-serif;
+    font-weight:800; font-style:italic;
+    letter-spacing:-0.01em;
+    font-size:22px; color: var(--white);
+    text-transform: uppercase;
+  }
+
+  .label-line::before{
+    content:""; display:inline-block; width:28px; height:1px;
+    background: linear-gradient(90deg, var(--signal), transparent);
+    vertical-align: middle; margin-right:10px;
+  }
+
+  .chrome-text{
+    background: linear-gradient(180deg, #FFFFFF 0%, #C9D2DD 40%, #5C6878 55%, #E5EAF2 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    text-shadow: 0 0 60px rgba(91,168,232,.18);
+  }
+
+  .corner{
+    position:absolute; width:14px; height:14px;
+    border-color: var(--signal);
+  }
+  .corner.tl{ top:-1px; left:-1px; border-top:1px solid; border-left:1px solid;}
+  .corner.tr{ top:-1px; right:-1px; border-top:1px solid; border-right:1px solid;}
+  .corner.bl{ bottom:-1px; left:-1px; border-bottom:1px solid; border-left:1px solid;}
+  .corner.br{ bottom:-1px; right:-1px; border-bottom:1px solid; border-right:1px solid;}
+
+  .swatch{
+    border-radius: 10px;
+    border:1px solid rgba(255,255,255,.06);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.08),
+      inset 0 -10px 30px rgba(0,0,0,.25),
+      0 12px 24px -16px rgba(0,0,0,.6);
+  }
+
+  .noise{
+    position:absolute; inset:0; pointer-events:none; opacity:.06; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='.6'/></svg>");
+  }
+
+  .tick{
+    position:absolute; background:var(--signal);
+  }
+  .tick.h{ height:1px; width:18px;}
+  .tick.v{ width:1px; height:18px;}
+
+  .icon-pill{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:56px; height:56px; border-radius:12px;
+    background: linear-gradient(180deg, rgba(46,120,200,.12), rgba(10,20,38,.6));
+    border:1px solid var(--line-strong);
+    color: var(--ice);
+  }
+
+  .btn-primary{
+    position:relative;
+    display:inline-flex; align-items:center; gap:14px;
+    padding: 14px 22px 14px 22px;
+    background: linear-gradient(180deg, #1B57A8 0%, #0E3672 100%);
+    border:1px solid #2A6FCB;
+    color:#fff; font-family:'Saira', sans-serif; font-weight:800; font-style:italic;
+    letter-spacing:.08em; text-transform:uppercase; font-size:13px;
+    border-radius: 4px;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.18),
+      0 14px 30px -16px rgba(46,120,200,.55),
+      0 0 0 1px rgba(0,0,0,.4);
+    transition: transform .2s cubic-bezier(.2,.7,.2,1), box-shadow .2s;
+  }
+  .btn-primary:hover{ transform: translateY(-1px); }
+  .btn-primary:active{ transform: translateY(0); }
+
+  .btn-danger{
+    background: linear-gradient(180deg, #E83A3A 0%, #8E1A1A 100%);
+    border-color: #FF6868;
+  }
+  .btn-ghost{
+    background: rgba(255,255,255,.02);
+    color: var(--white);
+    border: 1px solid var(--line-strong);
+  }
+
+  .divider-mono{
+    display:flex; align-items:center; gap:14px; color:var(--txt-dim);
+    font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.2em;
+    text-transform:uppercase;
+  }
+  .divider-mono::before, .divider-mono::after{
+    content:""; flex:1; height:1px; background:linear-gradient(90deg, transparent, var(--line-strong), transparent);
+  }
+
+  /* faux logo lockups for variations */
+  .lockup-bg-dark { background:#050B16; }
+  .lockup-bg-chrome { background: linear-gradient(135deg, #DCE2EA 0%, #9AA4B2 50%, #DCE2EA 100%); }
+  .lockup-bg-blue { background: linear-gradient(180deg, #143C72 0%, #2E78C8 100%); }
+  .lockup-bg-red { background: linear-gradient(180deg, #8E1A1A 0%, #E83A3A 100%); }
+
+  /* clearspace marks */
+  .cs-bracket{ position:absolute; width:14px; height:14px; border:1px solid var(--signal); }
+  .cs-bracket.tl{ border-right:0; border-bottom:0; top:-7px; left:-7px;}
+  .cs-bracket.tr{ border-left:0; border-bottom:0; top:-7px; right:-7px;}
+  .cs-bracket.bl{ border-right:0; border-top:0; bottom:-7px; left:-7px;}
+  .cs-bracket.br{ border-left:0; border-top:0; bottom:-7px; right:-7px;}
+
+  /* hex sphere upper-right ornament container */
+  .sphere{
+    position:absolute; top:-60px; right:-80px; width:520px; height:520px;
+    opacity:.5; pointer-events:none;
+    filter: drop-shadow(0 0 40px rgba(46,120,200,.25));
+  }
+
+  .scanline{
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0) 0px,
+      rgba(255,255,255,0) 3px,
+      rgba(255,255,255,.02) 3px,
+      rgba(255,255,255,.02) 4px
+    );
+  }
+</style>
+</head>
+<body class="antialiased">
+<div class="noise"></div>
+
+<!-- Page frame -->
+<main class="relative max-w-[1200px] mx-auto px-10 py-14">
+
+  <!-- HEX SPHERE ornament -->
+  <svg class="sphere" viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <radialGradient id="sg" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#5BA8E8" stop-opacity=".25"/>
+        <stop offset="55%" stop-color="#143C72" stop-opacity=".10"/>
+        <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="sl" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0%" stop-color="#5BA8E8"/>
+        <stop offset="100%" stop-color="#143C72"/>
+      </linearGradient>
+    </defs>
+    <circle cx="260" cy="260" r="240" fill="url(#sg)"/>
+    <g stroke="url(#sl)" stroke-width=".8" opacity=".7">
+      <!-- meridians -->
+      <ellipse cx="260" cy="260" rx="240" ry="240"/>
+      <ellipse cx="260" cy="260" rx="200" ry="240"/>
+      <ellipse cx="260" cy="260" rx="150" ry="240"/>
+      <ellipse cx="260" cy="260" rx="90"  ry="240"/>
+      <ellipse cx="260" cy="260" rx="30"  ry="240"/>
+      <!-- parallels -->
+      <ellipse cx="260" cy="260" rx="240" ry="30"/>
+      <ellipse cx="260" cy="260" rx="240" ry="90"/>
+      <ellipse cx="260" cy="260" rx="240" ry="150"/>
+      <ellipse cx="260" cy="260" rx="240" ry="200"/>
+    </g>
+    <g fill="#5BA8E8">
+      <circle cx="120" cy="180" r="1.6"/>
+      <circle cx="180" cy="120" r="1.4"/>
+      <circle cx="340" cy="160" r="1.8"/>
+      <circle cx="400" cy="260" r="1.4"/>
+      <circle cx="260" cy="60"  r="1.6"/>
+      <circle cx="80"  cy="280" r="1.2"/>
+    </g>
+  </svg>
+
+  <!-- HEADER -->
+  <header class="relative grid grid-cols-12 gap-8 items-end pb-10 border-b border-white/5">
+    <div class="col-span-8">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="mono text-[10px] tracking-[.32em] uppercase text-[color:var(--sky)]">Vol. 01 · 2026</span>
+        <span class="block w-12 h-px bg-[color:var(--signal)]"></span>
+        <span class="mono text-[10px] tracking-[.32em] uppercase text-[color:var(--txt-mut)]">OPS-BG-001</span>
+        <span class="block w-12 h-px bg-white/10"></span>
+        <span class="mono text-[10px] tracking-[.32em] uppercase text-[color:var(--txt-mut)]">Trade Precision · NSW</span>
+      </div>
+      <h1 class="display-italic leading-[0.84]" style="font-size:104px;">
+        <span class="text-white">BRAND</span><br/>
+        <span class="chrome-text">GUIDELINES</span><span class="text-[color:var(--signal)] align-top" style="font-size:24px; vertical-align:top; line-height:1; margin-left:8px;">●</span>
+      </h1>
+      <p class="mt-6 max-w-lg text-[13.5px] leading-[1.7] text-[color:var(--txt-mut)]">
+        The visual operating manual for <span class="text-white">Optic Plumbing Solutions</span> — a precision-led
+        trade brand servicing residential and commercial plumbing, drainage, gasfitting, CCTV and jet-blasting clients
+        across the greater Sydney region.
+      </p>
+    </div>
+    <div class="col-span-4 flex flex-col items-end gap-4">
+      <div class="panel-tight px-6 py-5 flex items-center gap-4 relative">
+        <span class="corner tl"></span><span class="corner tr"></span>
+        <span class="corner bl"></span><span class="corner br"></span>
+        <img src="brand_assets/logo.png" alt="OPS Logo" class="h-12 w-auto"/>
+        <div class="leading-tight">
+          <div class="cond text-white text-[18px] font-bold tracking-wide">OPTIC</div>
+          <div class="mono text-[9.5px] tracking-[.28em] uppercase text-[color:var(--sky)]">Plumbing · Solutions</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 mono text-[10px] tracking-[.24em] uppercase text-[color:var(--txt-mut)]">
+        <span class="text-[color:var(--signal)]">◣</span>
+        <span>Issued · 27.05.2026</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ROW 1 : COMPANY LOGO + LOGO VARIATIONS -->
+  <section class="grid grid-cols-12 gap-8 mt-14">
+
+    <!-- COMPANY LOGO -->
+    <div class="col-span-7">
+      <div class="flex items-baseline justify-between mb-4">
+        <h2 class="section-title"><span class="eyebrow-num mono text-[10px]">01</span>Company Logo</h2>
+        <span class="mono text-[10px] tracking-[.24em] uppercase text-[color:var(--txt-dim)]">Primary mark</span>
+      </div>
+      <div class="panel relative overflow-hidden">
+        <div class="absolute inset-0 grid-bg opacity-60"></div>
+        <div class="absolute inset-0 scanline"></div>
+        <div class="relative px-10 py-14 flex items-center justify-center">
+          <img src="brand_assets/logo.png" alt="OPS logo large" class="h-[150px] w-auto drop-shadow-[0_20px_30px_rgba(46,120,200,.25)]"/>
+        </div>
+        <div class="relative px-7 py-4 border-t border-white/5 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="block w-2 h-2 rounded-full bg-[color:var(--signal)] shadow-[0_0_10px_rgba(232,58,58,.7)]"></span>
+            <span class="mono text-[10px] tracking-[.24em] uppercase text-[color:var(--txt-mut)]">Approved Mark · vector master</span>
+          </div>
+          <span class="mono text-[10px] tracking-[.24em] uppercase text-[color:var(--sky)]">OPS-LOGO-PRIMARY-01</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOGO VARIATIONS -->
+    <div class="col-span-5">
+      <div class="flex items-baseline justify-between mb-4">
+        <h2 class="section-title"><span class="eyebrow-num mono text-[10px]">02</span>Logo Variations</h2>
+        <span class="mono text-[10px] tracking-[.24em] uppercase text-[color:var(--txt-dim)]">4 backgrounds</span>
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <div class="panel-tight overflow-hidden">
+          <div class="lockup-bg-dark h-[110px] flex items-center justify-center">
+            <img src="brand_assets/logo.png" class="h-12" alt="" />
+          </div>
+          <div class="px-3 py-2 flex justify-between items-center">
+            <span class="mono text-[9px] tracking-[.2em] uppercase text-[color:var(--txt-mut)]">Dark BG</span>
+            <span class="mono text-[9px] text-[color:var(--sky)]">#050B16</span>
+          </div>
+        </div>
+        <div class="panel-tight overflow-hidden">
+          <div class="lockup-bg-chrome h-[110px] flex items-center justify-center">
+            <img src="brand_assets/logo.png" class="h-12 mix-blend-multiply opacity-95" alt="" />
+          </div>
+          <div class="px-3 py-2 flex justify-between items-center">
+            <span class="mono text-[9px] tracking-[.2em] uppercase text-[color:var(--txt-mut)]">Chrome BG</span>
+            <span class="mono text-[9px] text-[color:var(--sky)]">#B6BEC8</span>
+          </div>
+        </div>
+        <div class="panel-tight overflow-hidden">
+          <div class="lockup-bg-blue h-[110px] flex items-center justify-center">
+            <img src="brand_assets/logo.png" class="h-12" alt="" />
+          </div>
+          <div class="px-3 py-2 flex justify-between items-center">
+            <span class="mono text-[9px] tracking-[.2em] uppercase text-[color:var(--txt-mut)]">Optic Blue</span>
+            <span class="mono text-[9px] text-[color:var(--sky)]">#143C72</span>
+          </div>
+        </div>
+        <div class="panel-tight overflow-hidden">
+          <div class="lockup-bg-red h-[110px] flex items-center justify-center">
+            <img src="brand_assets/logo.png" class="h-12" alt="" />
+          </div>
+          <div class="px-3 py-2 flex justify-between items-center">
+            <span class="mono text-[9px] tracking-[.2em] uppercase text-[color:var(--txt-mut)]">Signal Red</span>
+            <span class="mono text-[9px] text-[color:var(--signal)]">#E83A3A</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROW 2 : LOGO CLEARSPACE + BRAND PALETTE -->
+  <section class="grid grid-cols-12 gap-8 mt-14">
+
+    <!-- CLEARSPACE -->
+    <div class="col-span-5">
+      <div class="flex items-baseline justify-between mb-4">
+        <h2 class="section-title"><span class="eyebrow-num mono text-[10px]">03</span>Logo Clearspace</h2>
+        <span class="mono text-[10px] tracking-[.24em] uppercase text-[color:var(--txt-dim)]">Minimum: x = O-height</span>
+      </div>
+      <div class="panel relative overflow-hidden">
+        <div class="absolute inset-0 grid-bg-fine opacity-60"></div>
+        <div class="relative px-10 py-12 flex items-center justify-center">
+          <div class="relative" style="padding:40px;">
+            <!-- corners -->
+            <span class="cs-bracket tl"></span>
+            <span class="cs-bracket tr"></span>
+            <span class="cs-bracket bl"></span>
+            <span class="cs-bracket br"></span>
+            <!-- dashed clearspace box -->
+            <div class="absolute inset-0 border border-dashed border-[color:var(--signal)]/70"></div>
+            <!-- corner ticks -->
+            <span class="tick h" style="top:-1px; left:50%; transform:translateX(-50%);"></span>
+            <span class="tick h" style="bottom:-1px; left:50%; transform:translateX(-50%);"></span>
+            <span class="tick v" style="left:-1px; top:50%; transform:translateY(-50%);"></span>
+            <span class="tick v" style="right:-1px; top:50%; transform:translateY(-50%);"></span>
+            <!-- measurement labels -->
+            <span class="mono text-[10px] text-[color:var(--signal)]" style="position:absolute; top:-22px; left:50%; transform:translateX(-50%);">x</span>
+            <span class="mono text-[10px] text-[color:var(--signal)]" style="position:absolute; bottom:-22px; left:50%; transform:translateX(-50%);">x</span>
+            <span class="mono text-[10px] text-[color:var(--signal)]" style="position:absolute; left:-18px; top:50%; transform:translateY(-50%);">x</span>
+            <span class="mono text-[10px] text-[color:var(--signal)]" style="position:absolute; right:-18px; top:50%; transform:translateY(-50%);">x</span>
+
+            <img src="brand_assets/logo.png" alt="OPS clearspace" class="h-[88px] w-auto" />
+          </div>
+        </div>
+        <div class="px-7 py-4 border-t border-white/5 mono text-[10px] tracking-[.24em] uppercase text-[color:var(--txt-mut)]">
+          Maintain ≥ x on every side. x = the cap-height of the “P” glyph.
+        </div>
+      </div>
+      <!-- min size -->
+      <div class="mt-4 panel-tight px-5 py-4 flex items-center justify-between">
+        <div>
+          <div class="mono text-[10px] tracking-[.24em] uppercase text-[color:var(--sky)] mb-1">Minimum size</div>
+          <div class="cond text-white text-[20px] font-bold leading-none">24 px / 8 mm wide</div>
+        </div>
+        <div class="flex items-center gap-3">
+          <img src="brand_assets/logo.png" alt="min" class="h-3"/>
+          <img src="brand_assets/logo.png" alt="rec" class="h-6"/>
+          <img src="brand_assets/logo.png" alt="big" class="h-10"/>
+        </div>
+      </div>
+    </div>
+
+    <!-- BRAND PALETTE -->
+    <div class="col-span-7">
+      <div class="flex items-baseline justify-between mb-4">
+        <h2 class="section-title"><span class="eyebrow-num mono text-[10px]">04</span>Brand Palette</h2>
+        <span class="mono text-[10px] tracking-[.24em] uppercase text-[color:var(--txt-dim)]">8 system colors</span>
+      </div>
+      <div class="grid grid-cols-4 gap-4">
+        <!-- swatch template -->
+        <div>
+          <div class="swatch h-[110px]" style="background:linear-gradient(180deg,#0A1B33,#050912);"></div>
+          <div class="mt-2 flex items-baseline justify-between">
+            <span class="cond text-white text-[14px] font-bold uppercase">Jet Navy</span>
+            <span class="mono text-[9px] text-[color:var(--txt-dim)]">01</span>
+          </div>
+          <div class="mono text-[10px] text-[color:var(--txt-mut)] tracking-wider">#0A1B33</div>
+        </div>
+        <div>
+          <div class="swatch h-[110px]" style="background:linear-gradient(180deg,#143C72,#0B2750);"></div>
+          <div class="mt-2 flex items-baseline justify-between">
+            <span class="cond text-white text-[14px] font-bold uppercase">Optic Blue</span>
+            <span class="mono text-[9px] text-[color:var(--txt-dim)]">02</span>
+          </div>
+          <div class="mono text-[10px] text-[color:var(--txt-mut)] tracking-wider">#143C72</div>
+        </div>
+        <div>
+          <div class="swatch h-[110px]" style="background:linear-gradient(180deg,#2E78C8,#1957A0);"></div>
+          <div class="mt-2 flex items-baseline justify-between">
+            <span class="cond text-white text-[14px] font-bold uppercase">Hydro</span>
+            <span class="mono text-[9px] text-[color:var(--txt-dim)]">03</span>
+          </div>
+          <div class="mono text-[10px] text-[color:var(--txt-mut)] tracking-wider">#2E78C8</div>
+        </div>
+        <div>
+          <div class="swatch h-[110px]" style="background:linear-gradient(180deg,#5BA8E8,#3E86C5);"></div>
+          <div class="mt-2 flex items-baseline justify-between">
+            <span class="cond text-white text-[14px] font-bold uppercase">Sky Cyan</span>
+            <span class="mono text-[9px] text-[color:var(--txt-dim)]">04</span>
+          </div>
+          <div class="mono text-[10px] text-[color:var(--txt-mut)] tracking-wider">#5BA8E8</div>
+        </div>
+
+        <div>
+          <div class="swatch h-[110px]" style="background:linear-gradient(180deg,#F4F6FA,#B6BEC8 60%, #6E7886);"></div>
+          <div class="mt-2 flex items-baseline justify-between">
+            <span class="cond text-white text-[14px] font-bold uppercase">Chrome</span>
+            <span class="mono text-[9px] text-[color:var(--txt-dim)]">05</span>
+          </div>
+          <div class="mono text-[10px] text-[color:var(--txt-mut)] tracking-wider">#B6BEC8</div>
+        </div>
+        <div>
+          <div class="swatch h-[110px]" style="background:linear-gradient(180deg,#FFFFFF,#E2E7EE);"></div>
+          <div class="mt-2 flex items-baseline justify-between">
+            <span class="cond text-white text-[14px] font-bold uppercase">Pure White</span>
+            <span class="mono text-[9px] text-[color:var(--txt-dim)]">06</span>
+          </div>
+          <div class="mono text-[10px] text-[color:var(--txt-mut)] tracking-wider">#FFFFFF</div>
+        </div>
+        <div>
+          <div class="swatch h-[110px]" style="background:linear-gradient(180deg,#0D0F12,#000);"></div>
+          <div class="mt-2 flex items-baseline justify-between">
+            <span class="cond text-white text-[14px] font-bold uppercase">Jet Black</span>
+            <span class="mono text-[9px] text-[color:var(--txt-dim)]">07</span>
+          </div>
+          <div class="mono text-[10px] text-[color:var(--txt-mut)] tracking-wider">#050505</div>
+        </div>
+        <div>
+          <div class="swatch h-[110px]" style="background:linear-gradient(180deg,#E83A3A,#9A1C1C);"></div>
+          <div class="mt-2 flex items-baseline justify-between">
+            <span class="cond text-white text-[14px] font-bold uppercase">Signal Red</span>
+            <span class="mono text-[9px] text-[color:var(--txt-dim)]">08</span>
+          </div>
+          <div class="mono text-[10px] text-[color:var(--txt-mut)] tracking-wider">#E83A3A</div>
+        </div>
+      </div>
+
+      <!-- usage ratio -->
+      <div class="mt-6 panel-tight px-5 py-4">
+        <div class="flex items-center justify-between mb-3">
+          <span class="mono text-[10px] tracking-[.24em] uppercase text-[color:var(--sky)]">Usage Ratio</span>
+          <span class="mono text-[10px] tracking-[.24em] uppercase text-[color:var(--txt-dim)]">Dominant → Accent</span>
+        </div>
+        <div class="flex h-3 rounded-sm overflow-hidden border border-white/5">
+          <div style="flex:45;background:#050505"></div>
+          <div style="flex:22;background:#0A1B33"></div>
+          <div style="flex:14;background:#143C72"></div>
+          <div style="flex:9;background:#2E78C8"></div>
+          <div style="flex:5;background:#B6BEC8"></div>
+          <div style="flex:3;background:#FFFFFF"></div>
+          <div style="flex:2;background:#E83A3A"></div>
+        </div>
+        <div class="mt-2 flex justify-between mono text-[9px] tracking-wider text-[color:var(--txt-mut)]">
+          <span>BLACK 45</span><span>NAVY 22</span><span>OPTIC 14</span><span>HYDRO 9</span><span>CHROME 5</span><span>WHITE 3</span><span class="text-[color:var(--signal)]">RED 2</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROW 3 : TYPOGRAPHY -->
+  <section class="grid grid-cols-12 gap-8 mt-14">
+
+    <div class="col-span-12">
+      <div class="flex items-baseline justify-between mb-4">
+        <h2 class="section-title"><span class="eyebrow-num mono text-[10px]">05</span>Typography</h2>
+        <span class="mono text-[10px] tracking-[.24em] uppercase text-[color:var(--txt-dim)]">Display · Body · System</span>
+      </div>
+
+      <div class="grid grid-cols-12 gap-6">
+
+        <!-- DISPLAY FONT -->
+        <div class="col-span-7 panel p-8 relative overflow-hidden">
+          <div class="absolute inset-0 grid-bg-fine opacity-40"></div>
+          <div class="relative">
+            <div class="flex items-end justify-between">
+              <div class="display-italic text-white leading-[0.85]" style="font-size:140px;">Aa</div>
+              <div class="text-right">
+                <div class="mono text-[10px] tracking-[.28em] uppercase text-[color:var(--sky)]">Display · Italic 800</div>
+                <div class="cond text-white text-[26px] font-bold uppercase mt-1">Saira / Condensed Italic</div>
+                <div class="mono text-[10px] text-[color:var(--txt-mut)]">Headlines · CTAs · Truck lockups</div>
+              </div>
+            </div>
+            <div class="mt-6 grid grid-cols-2 gap-6">
+              <div>
+                <div class="cond text-white font-bold text-[20px] tracking-wide">ABCDEFGHIJKLMNOP<br/>QRSTUVWXYZ</div>
+                <div class="cond text-[color:var(--txt-mut)] font-medium text-[18px] mt-2 tracking-wide">abcdefghijklmnop<br/>qrstuvwxyz</div>
+                <div class="mono text-[14px] text-[color:var(--ice)] mt-2">0123456789 — / · &amp;</div>
+              </div>
+              <div class="flex flex-col gap-2 mono text-[10px] tracking-[.2em] uppercase text-[color:var(--txt-mut)]">
+                <div class="flex justify-between"><span>Weights</span><span class="text-white">500 · 700 · 800</span></div>
+                <div class="flex justify-between"><span>Style</span><span class="text-white">Italic + Roman</span></div>
+                <div class="flex justify-between"><span>Tracking</span><span class="text-white">−0.02em</span></div>
+                <div class="flex justify-between"><span>Use</span><span class="text-white">H1, H2, Buttons</span></div>
+                <div class="flex justify-between"><span>License</span><span class="text-white">OFL · Free</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BODY FONT -->
+        <div class="col-span-5 panel p-8 relative overflow-hidden">
+          <div class="absolute inset-0 grid-bg-fine opacity-30"></div>
+          <div class="relative">
+            <div class="flex items-end justify-between">
+              <div class="text-white leading-[0.85]" style="font-family:'Manrope';font-weight:700;font-size:140px;letter-spacing:-0.05em;">Aa</div>
+              <div class="text-right">
+                <div class="mono text-[10px] tracking-[.28em] uppercase text-[color:var(--sky)]">Body · 400 / 600</div>
+                <div class="text-white text-[20px] font-bold mt-1" style="font-family:'Manrope';">Manrope</div>
+                <div class="mono text-[10px] text-[color:var(--txt-mut)]">Paragraphs · UI · Forms</div>
+              </div>
+            </div>
+            <div class="mt-6">
+              <div class="text-white text-[14px] tracking-tight" style="font-family:'Manrope'; font-weight:600;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+              <div class="text-[color:var(--txt)] text-[14px] mt-1" style="font-family:'Manrope';">abcdefghijklmnopqrstuvwxyz</div>
+              <div class="mono text-[12px] text-[color:var(--ice)] mt-1">0123456789</div>
+              <p class="text-[12.5px] leading-[1.7] text-[color:var(--txt-mut)] mt-4">
+                Optic Plumbing Solutions services residential and commercial clients across drainage,
+                gasfitting, CCTV inspection and high-pressure jet-blasting — engineered for reliability.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- MONO -->
+        <div class="col-span-12 panel-tight px-6 py-5 grid grid-cols-12 gap-6 items-center">
+          <div class="col-span-3">
+            <div class="mono text-[10px] tracking-[.28em] uppercase text-[color:var(--sky)] mb-1">System · Mono</div>
+            <div class="mono text-white text-[22px] font-bold">JetBrains Mono</div>
+            <div class="mono text-[10px] text-[color:var(--txt-mut)] mt-1">Codes · Labels · Specs</div>
+          </div>
+          <div class="col-span-6 mono text-[13px] text-[color:var(--ice)] tracking-wider">
+            ABCDEFGHIJ · abcdefghij · 0123456789 — ! @ # %
+          </div>
+          <div class="col-span-3 flex flex-col gap-1 mono text-[10px] tracking-[.2em] uppercase text-[color:var(--txt-mut)]">
+            <div class="flex justify-between"><span>Use</span><span class="text-white">Eyebrows · IDs</span></div>
+            <div class="flex justify-between"><span>Tracking</span><span class="text-white">+0.04em</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ROW 3.5 : BRAND VOICE / TONE -->
+  <section class="grid grid-cols-12 gap-8 mt-14">
+    <div class="col-span-12">
+      <div class="flex items-baseline justify-between mb-4">
+        <h2 class="section-title"><span class="eyebrow-num mono text-[10px]">06</span>Brand Voice</h2>
+        <span class="mono text-[10px] tracking-[.24em] uppercase text-[color:var(--txt-dim)]">Tone · Pillars · Do / Don't</span>
+      </div>
+
+      <div class="grid grid-cols-12 gap-6">
+        <!-- Pillars -->
+        <div class="col-span-7 panel p-7 relative overflow-hidden">
+          <div class="absolute inset-0 grid-bg-fine opacity-30"></div>
+          <div class="relative">
+            <div class="mono text-[10px] tracking-[.28em] uppercase text-[color:var(--sky)] mb-5">Three Pillars</div>
+            <div class="grid grid-cols-3 gap-6">
+              <div>
+                <div class="display-italic text-white text-[48px] leading-none">01</div>
+                <div class="mt-2 cond text-white text-[18px] font-bold uppercase tracking-wide">Precision</div>
+                <p class="mt-2 text-[12.5px] leading-[1.7] text-[color:var(--txt-mut)]">Measured, engineered work — never improvised. Every job is documented and quoted with clarity.</p>
+              </div>
+              <div>
+                <div class="display-italic text-[color:var(--sky)] text-[48px] leading-none">02</div>
+                <div class="mt-2 cond text-white text-[18px] font-bold uppercase tracking-wide">Always On</div>
+                <p class="mt-2 text-[12.5px] leading-[1.7] text-[color:var(--txt-mut)]">24/7 response across the network. Burst, blockage or breakdown — there is always a truck moving.</p>
+              </div>
+              <div>
+                <div class="display-italic text-[color:var(--signal)] text-[48px] leading-none">03</div>
+                <div class="mt-2 cond text-white text-[18px] font-bold uppercase tracking-wide">Straight Talk</div>
+                <p class="mt-2 text-[12.5px] leading-[1.7] text-[color:var(--txt-mut)]">No upsell, no jargon. Plain language quotes, honest diagnostics, real photos in every report.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Do / Don't -->
+        <div class="col-span-5 panel p-7 relative overflow-hidden">
+          <div class="absolute inset-0 grid-bg-fine opacity-30"></div>
+          <div class="relative grid grid-cols-2 gap-5">
+            <div>
+              <div class="mono text-[10px] tracking-[.28em] uppercase text-[color:var(--sky)] mb-3 flex items-center gap-2">
+                <span class="block w-2 h-2 rounded-full bg-[color:var(--sky)]"></span> Do
+              </div>
+              <ul class="space-y-2 text-[12px] leading-[1.6] text-[color:var(--txt)]">
+                <li>Lead with confidence</li>
+                <li>Use trade-correct language</li>
+                <li>Keep copy short, scannable</li>
+                <li>Show real trucks, real jobs</li>
+                <li>Quote the fixed price</li>
+              </ul>
+            </div>
+            <div>
+              <div class="mono text-[10px] tracking-[.28em] uppercase text-[color:var(--signal)] mb-3 flex items-center gap-2">
+                <span class="block w-2 h-2 rounded-full bg-[color:var(--signal)]"></span> Don't
+              </div>
+              <ul class="space-y-2 text-[12px] leading-[1.6] text-[color:var(--txt-mut)]">
+                <li class="line-through decoration-[color:var(--signal)]/60">Overpromise turnaround</li>
+                <li class="line-through decoration-[color:var(--signal)]/60">Use stock plumber photos</li>
+                <li class="line-through decoration-[color:var(--signal)]/60">Stack adjectives</li>
+                <li class="line-through decoration-[color:var(--signal)]/60">Hide call-out fees</li>
+                <li class="line-through decoration-[color:var(--signal)]/60">Light pastel palettes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROW 4 : ICONOGRAPHY + BUTTON STYLE -->
+  <section class="grid grid-cols-12 gap-8 mt-14">
+
+    <!-- ICONS -->
+    <div class="col-span-8">
+      <div class="flex items-baseline justify-between mb-4">
+        <h2 class="section-title"><span class="eyebrow-num mono text-[10px]">07</span>Iconography Style</h2>
+        <span class="mono text-[10px] tracking-[.24em] uppercase text-[color:var(--txt-dim)]">1.5px stroke · rounded · 24px grid</span>
+      </div>
+      <div class="panel p-6 relative overflow-hidden">
+        <div class="absolute inset-0 grid-bg-fine opacity-30"></div>
+        <div class="relative grid grid-cols-6 gap-3">
+          <!-- 12 icons describing OPS services & system iconography -->
+          <!-- Each: pill + label -->
+          <!-- Pipe / Plumbing -->
+          <div class="flex flex-col items-center gap-2">
+            <span class="icon-pill">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h6v6"/><path d="M9 13h6"/><path d="M15 13v4h6"/><circle cx="9" cy="7" r="1"/></svg>
+            </span>
+            <span class="mono text-[9px] tracking-[.2em] uppercase text-[color:var(--txt-mut)]">Plumbing</span>
+          </div>
+          <!-- Drainage -->
+          <div class="flex flex-col items-center gap-2">
+            <span class="icon-pill">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18"/><path d="M5 5l1.5 14h11L19 5"/><path d="M9 9v7M15 9v7M12 9v7"/></svg>
+            </span>
+            <span class="mono text-[9px] tracking-[.2em] uppercase text-[color:var(--txt-mut)]">Drainage</span>
+          </div>
+          <!-- Gasfitting -->
+          <div class="flex flex-col items-center gap-2">
+            <span class="icon-pill">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s4 4 4 8a4 4 0 1 1-8 0c0-2 1.5-3 2-4 .8-1.5 2-4 2-4z"/><path d="M11 16c0 1 .5 2 1 2s1-1 1-2"/></svg>
+            </span>
+            <span class="mono text-[9px] tracking-[.2em] uppercase text-[color:var(--txt-mut)]">Gasfitting</span>
+          </div>
+          <!-- CCTV -->
+          <div class="flex flex-col items-center gap-2">
+            <span class="icon-pill">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="13" height="8" rx="1.5"/><path d="M16 9l4-2v10l-4-2"/><circle cx="7.5" cy="11" r="1.4"/></svg>
+            </span>
+            <span class="mono text-[9px] tracking-[.2em] uppercase text-[color:var(--txt-mut)]">CCTV</span>
+          </div>
+          <!-- Jet Blasting -->
+          <div class="flex flex-col items-center gap-2">
+            <span class="icon-pill">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h6"/><path d="M10 9l4 3-4 3z" fill="currentColor" opacity=".25"/><path d="M16 7l4 5-4 5"/><path d="M14 12h6"/></svg>
+            </span>
+            <span class="mono text-[9px] tracking-[.2em] uppercase text-[color:var(--txt-mut)]">Jet Blast</span>
+          </div>
+          <!-- Commercial -->
+          <div class="flex flex-col items-center gap-2">
+            <span class="icon-pill">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M8 8h2M14 8h2M8 12h2M14 12h2M8 16h2M14 16h2"/></svg>
+            </span>
+            <span class="mono text-[9px] tracking-[.2em] uppercase text-[color:var(--txt-mut)]">Commercial</span>
+          </div>
+          <!-- Residential -->
+          <div class="flex flex-col items-center gap-2">
+            <span class="icon-pill">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+            </span>
+            <span class="mono text-[9px] tracking-[.2em] uppercase text-[color:var(--txt-mut)]">Residential</span>
+          </div>
+          <!-- Water drop -->
+          <div class="flex flex-col items-center gap-2">
+            <span class="icon-pill">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 7 6 12a6 6 0 1 1-12 0c0-5 6-12 6-12z"/></svg>
+            </span>
+            <span class="mono text-[9px] tracking-[.2em] uppercase text-[color:var(--txt-mut)]">Water</span>
+          </div>
+          <!-- Wrench -->
+          <div class="flex flex-col items-center gap-2">
+            <span class="icon-pill">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-2.4z"/></svg>
+            </span>
+            <span class="mono text-[9px] tracking-[.2em] uppercase text-[color:var(--txt-mut)]">Service</span>
+          </div>
+          <!-- Phone -->
+          <div class="flex flex-col items-center gap-2">
+            <span class="icon-pill">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3l2 5-2 1a12 12 0 0 0 6 6l1-2 5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+            </span>
+            <span class="mono text-[9px] tracking-[.2em] uppercase text-[color:var(--txt-mut)]">Call 24/7</span>
+          </div>
+          <!-- Map pin -->
+          <div class="flex flex-col items-center gap-2">
+            <span class="icon-pill">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-7 7-13a7 7 0 1 0-14 0c0 6 7 13 7 13z"/><circle cx="12" cy="9" r="2.4"/></svg>
+            </span>
+            <span class="mono text-[9px] tracking-[.2em] uppercase text-[color:var(--txt-mut)]">Local</span>
+          </div>
+          <!-- Shield (warranty) -->
+          <div class="flex flex-col items-center gap-2">
+            <span class="icon-pill">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+            </span>
+            <span class="mono text-[9px] tracking-[.2em] uppercase text-[color:var(--txt-mut)]">Licensed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BUTTON STYLE -->
+    <div class="col-span-4">
+      <div class="flex items-baseline justify-between mb-4">
+        <h2 class="section-title"><span class="eyebrow-num mono text-[10px]">08</span>Button Style</h2>
+        <span class="mono text-[10px] tracking-[.24em] uppercase text-[color:var(--txt-dim)]">3 variants</span>
+      </div>
+      <div class="panel p-6 flex flex-col gap-4 relative overflow-hidden">
+        <div class="absolute inset-0 grid-bg-fine opacity-30"></div>
+        <div class="relative flex flex-col gap-4">
+          <div>
+            <button class="btn-primary">
+              <span>Book a Plumber</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <div class="mt-2 mono text-[9px] tracking-[.24em] uppercase text-[color:var(--txt-mut)]">Primary · Optic Blue</div>
+          </div>
+          <div>
+            <button class="btn-primary btn-danger">
+              <span>Emergency 24/7</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3l2 5-2 1a12 12 0 0 0 6 6l1-2 5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+            </button>
+            <div class="mt-2 mono text-[9px] tracking-[.24em] uppercase text-[color:var(--signal)]">Urgent · Signal Red</div>
+          </div>
+          <div>
+            <button class="btn-primary btn-ghost">
+              <span>View Services</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <div class="mt-2 mono text-[9px] tracking-[.24em] uppercase text-[color:var(--txt-mut)]">Ghost · Outline</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="mt-14 pt-6 border-t border-white/5">
+    <div class="divider-mono mb-6"><span>End of System · v1.0 · 2026</span></div>
+    <div class="flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="brand_assets/logo.png" alt="" class="h-8"/>
+        <div class="leading-tight">
+          <div class="cond text-white text-[14px] font-bold uppercase tracking-wider">Optic Plumbing Solutions</div>
+          <div class="mono text-[9px] tracking-[.28em] uppercase text-[color:var(--txt-mut)]">0451 766 576 · Licensed &amp; Insured</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 mono text-[10px] tracking-[.24em] uppercase text-[color:var(--txt-mut)]">
+        <span class="text-[color:var(--signal)]">●</span>
+        <span>Visual System maintained by OPS Studio</span>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+</body>
+</html>

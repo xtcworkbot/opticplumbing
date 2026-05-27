@@ -1,0 +1,6 @@
+node_modules/
+temporary screenshots/
+.DS_Store
+*.log
+reference_guidelines.png
+zoom.mjs
