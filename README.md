@@ -53,8 +53,8 @@ node screenshot.mjs http://localhost:3000 [label]
 
 | Placeholder | Where | Replace with |
 |---|---|---|
-| `{{LICENCE_NUMBER}}` | Trust panel · footer · floating badge · schema | NSW plumber's licence # once issued |
-| `FORM_ID_PLACEHOLDER` | `<form action="...">` | Real Formspree endpoint (`https://formspree.io/f/xxxxxxx`) |
+| ~~`{{LICENCE_NUMBER}}`~~ | ✅ Done — NSW Licence #368355C added to all 4 spots + schema | |
+| ~~`FORM_ID_PLACEHOLDER`~~ | ✅ Done — Formspree endpoint `mnjrrwqv` wired up | |
 | 6 placeholder Google reviews | Reviews section | Real reviews once Google Business Profile is verified |
 | `sameAs: []` in LocalBusiness schema | `<head>` JSON-LD | GBP URL + Hipages/ServiceSeeking listings |
 
